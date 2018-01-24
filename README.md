@@ -39,7 +39,7 @@ You can obviously train your own models as well. Please note that this version d
 
 [Here's a good example with DRAGNN wrapper](https://github.com/ljm625/syntaxnet-rest-api) to build real applications.
 
-Here is a reference how to download and use the pre-trained [Parsey Universal](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/universal.md) models.
+Here you can download pre-trained [Parsey Universal](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/universal.md) models.
 
 ## Notes
 
