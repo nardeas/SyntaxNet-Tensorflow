@@ -7,7 +7,7 @@
 Minimal Docker image based on Alpine with Tensorflow and SyntaxNet/DRAGNN support.
 
 **Total size:** ~420MB  
-**Tensorflow version:** 1.3.0-rc2 (SyntaxNet support)
+**Tensorflow version:** 1.3.0-rc2 (SyntaxNet support)  
 **Python version:** 2.7.13
 
 This is a production ready base image. Build your TF apps on top of this to get most out of your precious disk space.
