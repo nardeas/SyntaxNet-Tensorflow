@@ -19,7 +19,7 @@ Build typically takes 1-1.5 hours on a 2017 MacBook Pro.
 
 Note that the Tensorflow version depends on what is supported by [SyntaxNet](https://github.com/tensorflow/models/tree/master/research/syntaxnet). Building a working SN installation requires some additional operations not supported by TF as is.
 
-**This version is using the latest DRAGNN mode, which is way more faster than the original SyntaxNet implementation!**
+**This version uses the latest DRAGNN mode, which is much faster than the original SyntaxNet implementation!**
 
 ## hub.docker.com
 
