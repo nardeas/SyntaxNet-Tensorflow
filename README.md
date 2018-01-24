@@ -37,10 +37,18 @@ I recommend building with a DRAGNN wrapper and some pre-trained models to make d
 
 You can obviously train your own models as well. Please note that this version doesn't include GPU support.
 
-[Here's an good example with DRAGNN wrapper](https://github.com/ljm625/syntaxnet-rest-api) to build real applications.
+[Here's a good example with DRAGNN wrapper](https://github.com/ljm625/syntaxnet-rest-api) to build real applications.
 
-Here you can download pre-trained [Parsey Universal](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/universal.md) models.
+Here is a reference how to download and use the pre-trained [Parsey Universal](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/universal.md) models.
 
 ## Notes
 
-This image contains a full Tensorflow installation. Any readily available models are excluded from this image to keep it as lean as possible. Having SyntaxNet support doesn't produce much overhead so this image is well suited for use with any other TF applications as well.
+This image contains a full Tensorflow installation. Any readily available pre-trained models are excluded from this image to keep it as lean as possible. Having SyntaxNet support doesn't produce much overhead so this image is well suited for use with any other TF applications as well.
+
+Also note that this version doesn't include Bazel ops from the original SN. In other words you won't use stuff like `bazel-bin/syntaxnet/parser_eval` - you should use DRAGNN parser instead.
+
+*e.g load op definitions with:*
+
+```python
+from dragnn.python import load_dragnn_cc_impl
+```
