@@ -12,6 +12,7 @@ This is a production ready base image for your ML needs. Build your TF apps on t
 
 Build typically takes 1-1.5 hours on a 2017 MacBook Pro.
 
+**Compressed size:** ~199MB  
 **Total size:** ~421MB  
 **Tensorflow version:** 1.3.0-rc2  
 **Python version:** 2.7.14
