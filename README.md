@@ -37,7 +37,7 @@ I recommend building with a DRAGNN wrapper and some pre-trained models to make d
 
 You can obviously train your own models as well. Please note that this version doesn't include GPU support.
 
-[Here's an good example with DRAGNN wrappern](https://github.com/ljm625/syntaxnet-rest-api) to build real applications.
+[Here's an good example with DRAGNN wrapper](https://github.com/ljm625/syntaxnet-rest-api) to build real applications.
 
 Here you can download pre-trained [Parsey Universal](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/universal.md) models.
 
