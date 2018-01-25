@@ -80,7 +80,7 @@ class SyntaxNet(object):
         except:
             if rename:
                 self.rename_vars(base_dir, checkpoint_name)
-                return self.load(base_dir, master_spec_name, checkpoint_name, False)
+                return self.load_model(base_dir, master_spec_name, checkpoint_name, False)
             raise Exception('Cannot load model: spec expects references to */kernel tensors instead of */weights.\
             Try running with rename=True or run rename_vars() to convert existing checkpoint files into supported format')
 
