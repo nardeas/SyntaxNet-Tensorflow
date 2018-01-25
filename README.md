@@ -49,7 +49,7 @@ sn.parse("This is an example")
 
 It will output a dict:
 
-```json
+```
 {
   "input": "This is an example",
   "output": [
