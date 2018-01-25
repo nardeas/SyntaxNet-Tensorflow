@@ -94,5 +94,12 @@ RUN set -x \
     && rm -rf /tmp/* \
     && rm -rf /root/.cache/*
 
+# Build directory trees for models and dragnn wrapper
+RUN set -x \
+    && mkdir -p /usr/local/tfmodels \
+    && mkdir -p /usr/lib/python2.7/site-packages/dragnn/wrapper
+
+COPY wrapper.py /usr/lib/python2.7/site-packages/dragnn/wrapper/__init__.py
+
 WORKDIR /opt
 CMD ["/bin/sh"]

@@ -31,24 +31,56 @@ docker pull nardeas/tensorflow-syntaxnet:latest
 
 ## How to actually use
 
-You can create your own image for your TF/DRAGNN application by using this as base image.
+You can create your own image for your TF application by using this as base image.
 
-I recommend building with a DRAGNN wrapper and some pre-trained models to make development easier.
+Included is an easy to use DRAGNN wrapper that works with the pre-trained CoNLL17 models. Here is a reference how you can [download the models](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/conll2017/README.md).
 
 You can obviously train your own models as well. Please note that this version doesn't include GPU support.
 
-[Here's a good example with DRAGNN wrapper](https://github.com/ljm625/syntaxnet-rest-api) to build real applications.
+### Wrapper
 
-Here you can download pre-trained [Parsey Universal](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/universal.md) models.
+The included DRAGNN wrapper is built into `/usr/lib/python2.7/site-packages/dragnn/wrapper` so you can simply do:
+
+```python
+from dragnn.wrapper import SyntaxNet
+sn = SyntaxNet(lang="English", model_dir="/path/to/model/dir", logging=False)
+sn.parse("This is an example")
+```
+
+It will output a dict:
+
+```json
+{
+  "input": "This is an example",
+  "output": [
+    {
+      "break_level": 0,
+      "category": "",
+      "dep": "nsubj",
+      "fpos": "PRON++DT",
+      "head": 3,
+      "label": "nsubj",
+      "number": "Sing",
+      "pos_tag": "DT",
+      "prontype": "Dem",
+      "word": "This"
+    },
+    {
+      ...
+```
+
+Note that `lang` is the subfolder name in `model_dir` which should contain the language specific segmenter and parser models. The default directory to search for models is `/usr/local/tfmodels/`. If you have downloaded and extracted the `conll17.zip` via the instructions above, you can launch the container like this:
+
+```
+# Mount the extracted models dir on host machine as volume in container
+
+docker run -it -v <path/to/extracted/zip>:/usr/local/tfmodels/ nardeas/tensorflow-syntaxnet
+```
+
+and the above example should work out of the box. Only provide `lang` parameter to constructor (default "English").
 
 ## Notes
 
 This image contains a full Tensorflow installation. Any readily available pre-trained models are excluded from this image to keep it as lean as possible. Having SyntaxNet support doesn't produce much overhead so this image is well suited for use with any other TF applications as well.
 
-Also note that this version doesn't include Bazel ops from the original SN. In other words you won't use stuff like `bazel-bin/syntaxnet/parser_eval` - you should use DRAGNN parser instead.
-
-*e.g load op definitions with:*
-
-```python
-from dragnn.python import load_dragnn_cc_impl
-```
+Also note that this version doesn't include Bazel ops from the original SN. In other words you won't use stuff like `bazel-bin/syntaxnet/parser_eval` - you should use DRAGNN parser instead. The easiest way to get up and running fast is using the included DRAGNN wrapper.
