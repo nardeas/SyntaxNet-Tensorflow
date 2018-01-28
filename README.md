@@ -2,7 +2,7 @@
 
 [![Pulls](https://img.shields.io/docker/pulls/nardeas/tensorflow-syntaxnet.svg?style=flat-square)](https://img.shields.io/docker/pulls/nardeas/tensorflow-syntaxnet.svg?style=flat-square)
 [![Stars](https://img.shields.io/docker/stars/nardeas/tensorflow-syntaxnet.svg?style=flat-square)](https://img.shields.io/docker/stars/nardeas/tensorflow-syntaxnet.svg?style=flat-square)
-[![Size](https://img.shields.io/imagelayers/image-size/nardeas/tensorflow-syntaxnet/latest.svg?style=flat-square)](https://img.shields.io/imagelayers/image-size/nardeas/tensorflow-syntaxnet/latest.svg?style=flat-square)
+[![](https://images.microbadger.com/badges/image/nardeas/tensorflow-syntaxnet.svg)](https://microbadger.com/images/nardeas/tensorflow-syntaxnet "Get your own image badge on microbadger.com")
 
 > `docker pull nardeas/tensorflow-syntaxnet`
 
