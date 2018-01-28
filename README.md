@@ -1,7 +1,7 @@
 # Tensorflow SyntaxNet/DRAGNN
 
-[![Pulls](https://img.shields.io/docker/pulls/nardeas/tensorflow-syntaxnet.svg?style=flat-square)](https://img.shields.io/docker/pulls/nardeas/tensorflow-syntaxnet.svg?style=flat-square)
-[![Stars](https://img.shields.io/docker/stars/nardeas/tensorflow-syntaxnet.svg?style=flat-square)](https://img.shields.io/docker/stars/nardeas/tensorflow-syntaxnet.svg?style=flat-square)
+[![Pulls](https://img.shields.io/docker/pulls/nardeas/tensorflow-syntaxnet.svg)](https://img.shields.io/docker/pulls/nardeas/tensorflow-syntaxnet.svg?style=flat-square)
+[![Stars](https://img.shields.io/docker/stars/nardeas/tensorflow-syntaxnet.svg)](https://img.shields.io/docker/stars/nardeas/tensorflow-syntaxnet.svg?style=flat-square)
 [![](https://images.microbadger.com/badges/image/nardeas/tensorflow-syntaxnet.svg)](https://microbadger.com/images/nardeas/tensorflow-syntaxnet "Get your own image badge on microbadger.com")
 
 > `docker pull nardeas/tensorflow-syntaxnet`
