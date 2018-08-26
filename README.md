@@ -42,7 +42,7 @@ The included DRAGNN wrapper is built into `/usr/lib/python2.7/site-packages/drag
 
 ```python
 from dragnn.wrapper import SyntaxNet
-sn = SyntaxNet(lang="English", model_dir="/path/to/model/dir", logging=False)
+sn = SyntaxNet(lang="English", model_dir="/usr/local/tfmodels/", logging=False)
 sn.parse("This is an example")
 ```
 
