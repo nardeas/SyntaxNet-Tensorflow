@@ -32,7 +32,9 @@ docker pull nardeas/tensorflow-syntaxnet:latest
 
 You can create your own image for your TF application by using this as base image.
 
-Included is an easy to use DRAGNN wrapper that works with the pre-trained CoNLL17 models. Here is a reference how you can [download the models](https://github.com/tensorflow/models/blob/master/research/syntaxnet/g3doc/conll2017/README.md).
+Included is an easy to use DRAGNN wrapper that works with the pre-trained CoNLL17 models. Here is a reference how you can [download the models](https://github.com/tiangolo/tensorflow-models/tree/master/research/syntaxnet/g3doc/conll2017).
+
+[[Direct link to models archive]](https://drive.google.com/file/d/0BxpbZGYVZsEeSFdrUnBNMUp1YzQ/view)
 
 You can obviously train your own models as well. Please note that this version doesn't include GPU support.
 
